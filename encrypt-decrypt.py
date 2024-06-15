@@ -20,7 +20,7 @@ def encrypt_decrypt(file, key, decrypt=False):
     new_content = content.translate(mapping)  
 
     with open(file, "w") as f:
-        f.write(new_content)  # Write the new content in the file
+        f.write(new_content)  
 
 def change_extension(file, new_extension):
     """Change the extension of a file"""
@@ -30,7 +30,7 @@ def change_extension(file, new_extension):
     return new_name
 
 def main():
-    file = "test.txt"  # File to encrypt or decrypt
+    file = "test.txt"  # File 
     key = generate_key()  
     print(f"Key: {key}")  
 
@@ -46,8 +46,8 @@ def main():
     original_file_name = change_extension(new_name, ".txt")
 
     # Decrypt the file
-    encrypt_decrypt(original_file_name, key, decrypt=True)  # Decrypt the file
-    print(f"{original_file_name} has been decrypted")  # Print a message
+    encrypt_decrypt(original_file_name, key, decrypt=True)  
+    print(f"{original_file_name} has been decrypted")  
 
 if __name__ == "__main__":
     main()
